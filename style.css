@@ -1,0 +1,270 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: rgba(26, 25, 25, 0.877);
+}
+.container{
+    margin: 20px ;
+    height: 90vh;
+    display: flex;
+    /*flex-wrap: wrap;*/
+}
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+    }
+}
+.left{
+    display: flex;
+}
+@media screen and (max-width: 768px){
+    .left{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+ 
+/*соцсети */
+.social{
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 768px){
+    .social{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+.social a+a{
+    margin-top:20px ;
+}
+.social a{
+    transition: all 0.6s ease;
+}
+@media screen and (max-width: 768px){
+    .social a{
+        margin: 20px;
+    }
+}
+.social a:hover{
+    transform: scale(2.1);
+    transition: all 0.6s ease;
+}
+.social a img{
+    height: 20px; 
+}
+
+/*карточка*/
+.card-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    /*background: inherit;*/
+    margin: 0;
+    /*box-shadow: 0 0 25px rgba(27,30,52,0.3);*/
+    transform-style: preserve-3d;
+}
+
+.card .photo {
+    /*background: linear-gradient(142deg, rgba(27,30,52,1) 0%, rgb(52, 53, 63) 100%);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(10px); /* Нужно для паралакс эффекта*/
+    /*box-shadow: 5px 5px 25px black,-5px -5px 25px black, inset 5px 5px 25px black,-5px -5px 25px black;*/
+    border-radius: 5px;
+    height: 100vh;
+}
+.card .photo .text{
+margin-top: -20%;
+}
+.card .photo img {
+    /*border-radius: 10%;*/
+    width: 100%;
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px){
+    .card .photo img{
+        width: 70%;
+    }
+}
+
+.card .name {
+    color: #fff;
+    margin: 25px 0;
+    font-weight: 500;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Comforter', cursive;
+}
+@media screen and (max-width: 320px){
+    .card .name{
+        font-size: 50px;
+    }
+}
+
+.card .description {
+    color: rgb(201, 76, 76);
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
+/*весь текст*/
+.all-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+@media screen and (max-width: 768px){
+    .all-text{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+    position: relative;
+}
+@media screen and (max-width: 768px){
+    .about{
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        width: 80vw;
+    }
+}
+.about h1{
+    font-family: 'Comforter', cursive;
+    color: #fff;
+    font-weight: 500;
+    font-size: 50px;
+    transition:all 0.8s ease;
+}
+
+.about h1:hover{
+    color: rgb(201, 76, 76);
+}
+
+.about p span{
+    color: rgb(201, 76, 76);
+    font-size: 18px;
+    padding-left: 50px;
+
+}
+.about p{
+    font-size: 20px;
+    font-style: italic;
+    text-align: left;
+    color: #fff;
+    margin: 0;
+}
+@media screen and (max-width: 768px){
+    .about p{
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/*скилы */
+
+.skils_block{
+    position: relative;
+    width: 90%;
+    padding: 0;
+    margin: 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: safe;
+}
+@media screen and (max-width: 768px){
+    .skils_block{
+        width: 70%;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+.skils_block_title{
+    align-self: flex-start;
+}
+.skils_block_title h2{
+    font-family: 'Comforter', cursive;
+    color: #fff;
+    font-weight: 500;
+    font-size: 50px;
+    transition:all 0.8s ease;
+}
+.skils_block_title h2:hover{
+    color: rgb(201, 76, 76);
+}
+.skill_name{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+}
+.skill_bar{
+    height: 20px;
+    background: #cacaca;
+    border-radius: 8px;
+    width: 400px;
+}
+@media screen and (max-width: 768px){
+    .skill_bar{
+        width: 300px;
+    }
+}
+.skill_per{
+    position: relative;
+    height: 20px;
+    background-color: rgb(201, 76, 76);
+    border-radius: 8px;
+    width: 0;
+    transition:2s linear ;
+}
+.skill_per .value{
+    position: absolute;
+    background: #fff;
+    padding: 4px 6px;
+    font-size: 12px;
+    color: #000;
+    border-radius: 4px;
+    right: 0;
+    top: -35px;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: 4s ease;
+}
